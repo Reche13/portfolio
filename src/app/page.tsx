@@ -1,22 +1,19 @@
 "use client";
 
 import Lenis from "lenis";
-import { MotionValue, useScroll, useTransform, motion } from "motion/react";
+import {
+  MotionValue,
+  useScroll,
+  useTransform,
+  motion,
+  useInView,
+} from "motion/react";
 import { useEffect, useRef } from "react";
 
-import { Bricolage_Grotesque, Bebas_Neue } from "next/font/google";
-
-const bebasNeue = Bebas_Neue({
-  subsets: ["latin"],
-  weight: "400",
-  variable: "--font-bebas-neue",
-});
-
-const bricolageGrotesque = Bricolage_Grotesque({
-  subsets: ["latin"],
-  weight: ["600", "700"],
-  variable: "--font-bricolage-grotesque",
-});
+import AnimatedPara from "@/components/AnimatedPara";
+import { bebasNeue, bricolage } from "@/assets/fonts";
+import BounceUpText from "@/components/text/BounceUpText";
+import FadeUpText from "@/components/text/FadeUpText";
 
 export default function Home() {
   const container = useRef<null | HTMLDivElement>(null);
@@ -44,16 +41,17 @@ export default function Home() {
   }, []);
 
   return (
-    <div ref={container} className="w-full relative h-[200vh] bg-white">
+    <div ref={container} className="w-full relative h-[200vh] bg-black">
+      {/* <MainContainer /> */}
       <SectionOne scrollY={scrollYProgress} />
       <SectionTwo scrollY={scrollYProgress} />
+      <div className="bg-white h-screen w-full"></div>
     </div>
   );
 }
 
 const SectionOne = ({ scrollY }: { scrollY: MotionValue<number> }) => {
   const scale = useTransform(scrollY, [0, 1], [1, 0.8]);
-  console.log(scrollY);
   const rotate = useTransform(scrollY, [0, 1], [0, -6]);
 
   return (
@@ -61,18 +59,37 @@ const SectionOne = ({ scrollY }: { scrollY: MotionValue<number> }) => {
       style={{ scale, rotate }}
       className="sticky top-0 flex items-center justify-center h-screen bg-[#CA231D]"
     >
-      <div className="flex flex-col items-center gap-5">
-        <span
-          className={`${bricolageGrotesque.className} text-center font-bold text-[40px] md:text-[64px] text-[#F6EDDC]`}
+      <div
+        className="absolute inset-0 pointer-events-none z-0"
+        style={{
+          backgroundImage: "url('/arches-texture.png')",
+          backgroundRepeat: "repeat",
+          opacity: 0.7,
+          mixBlendMode: "multiply",
+        }}
+      />
+
+      <div
+        className={`${bebasNeue.className} pointer-events-none text-center text-[20vh] md:text-[50vh] text-black/5 z-[-1] font-bold absolute inset-0 h-full overflow-hidden flex flex-col items-center justify-center leading-[1]`}
+      >
+        {/* <span className="">FULLSTACK</span> */}
+        {/* <span>DEVELOPER</span> */}
+      </div>
+      <div className="flex flex-col items-center">
+        <FadeUpText>
+          <span
+            className={`${bricolage.className} text-center font-bold text-[40px] md:text-[64px] text-[#F6EDDC] selection:bg-black`}
+          >
+            Hey I&rsquo;m
+          </span>
+        </FadeUpText>
+
+        <div
+          className={`${bebasNeue.className} flex flex-col items-center text-center text-[#F6EDDC] mt-10`}
         >
-          Hey I&rsquo;m
-        </span>
-        <h1
-          className={`${bebasNeue.className} flex flex-col items-center text-center text-[#F6EDDC] text-[128px] md:text-[175px] leading-36`}
-        >
-          <span>RECHÉ</span>
-          <span>SOARES</span>
-        </h1>
+          <BounceUpText text="RECHÉ" />
+          <BounceUpText reverse delay={0.5} text="SOARES" />
+        </div>
       </div>
     </motion.div>
   );
@@ -84,15 +101,25 @@ const SectionTwo = ({ scrollY }: { scrollY: MotionValue<number> }) => {
 
   return (
     <motion.div
-      style={{ scale, rotate }}
+      style={{
+        scale,
+        rotate,
+      }}
       className="relative flex items-center justify-center h-screen bg-[#17140F] px-4"
     >
-      <p
-        className={`${bricolageGrotesque.className} text-center font-bold text-[40px] md:text-[64px] text-[#F6EDDC] max-w-[20ch]`}
-      >
+      <div
+        className="absolute inset-0 pointer-events-none z-0"
+        style={{
+          backgroundImage: "url('/linen-texture.png')",
+          backgroundRepeat: "repeat",
+          opacity: 0.7,
+          mixBlendMode: "difference",
+        }}
+      />
+      <AnimatedPara>
         A Full Stack Engineer from Goa that loves building web apps that are
         fast, scalable, and smooth.
-      </p>
+      </AnimatedPara>
     </motion.div>
   );
 };
