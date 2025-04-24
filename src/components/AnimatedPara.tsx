@@ -11,9 +11,7 @@ const AnimatedPara = ({ children }: { children: ReactNode }) => {
     offset: ["start 0.8", "start 0.3"],
   });
 
-  useEffect(() => {
-    scrollYProgress.on("change", (e) => console.log(e));
-  }, []);
+  useEffect(() => console.log("anima para"), []);
 
   if (typeof children !== "string") return;
   const words = children.split(" ");
@@ -46,6 +44,8 @@ interface WordProps {
 }
 const Word = ({ word, range, progress }: WordProps) => {
   const opacity = useTransform(progress, range, [0, 1]);
+
+  useEffect(() => console.log("word"), []);
 
   return (
     <span className="relative">

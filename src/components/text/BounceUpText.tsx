@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import { motion, useInView } from "motion/react";
 
 interface Props {
@@ -10,6 +10,8 @@ interface Props {
 const BounceUpText = ({ text, reverse = false, delay = 0 }: Props) => {
   const textContainerRef = useRef<null | HTMLDivElement>(null);
   const isInView = useInView(textContainerRef, { once: true });
+
+  useEffect(() => console.log("bounce up"), []);
 
   return (
     <motion.div
@@ -45,7 +47,7 @@ const BounceUpText = ({ text, reverse = false, delay = 0 }: Props) => {
               },
             },
           }}
-          className="inline-block align-bottom leading-none selection:bg-black hover:opacity-50"
+          className="inline-block align-bottom leading-none selection:bg-black hover:opacity-50 will-change-transform"
         >
           {char}
         </motion.span>

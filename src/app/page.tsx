@@ -24,6 +24,8 @@ export default function Home() {
     };
   }, []);
 
+  useEffect(() => console.log("page"), []);
+
   return (
     <div className="w-full relative bg-black">
       <SectionOne />

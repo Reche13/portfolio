@@ -1,10 +1,12 @@
 import AnimatedPara from "@/components/AnimatedPara";
 import { useTransform, MotionValue, motion } from "motion/react";
-import React from "react";
+import React, { useEffect } from "react";
 
 const About = ({ scrollY }: { scrollY: MotionValue<number> }) => {
   const scale = useTransform(scrollY, [0, 1], [0.8, 1]);
   const rotate = useTransform(scrollY, [0, 1], [6, 0]);
+
+  useEffect(() => console.log("About"), []);
 
   return (
     <motion.div
@@ -12,7 +14,7 @@ const About = ({ scrollY }: { scrollY: MotionValue<number> }) => {
         scale,
         rotate,
       }}
-      className="relative flex items-center justify-center h-screen bg-[#17140F] px-4"
+      className="relative flex items-center justify-center h-screen bg-[#17140F] px-4 will-change-transform"
     >
       <div
         className="absolute inset-0 pointer-events-none z-0"
@@ -31,4 +33,4 @@ const About = ({ scrollY }: { scrollY: MotionValue<number> }) => {
   );
 };
 
-export default About;
+export default React.memo(About);

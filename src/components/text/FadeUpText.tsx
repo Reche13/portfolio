@@ -1,6 +1,7 @@
 "use client"; // for Next.js App Router (optional)
 
 import { motion } from "framer-motion";
+import { useEffect } from "react";
 
 interface Props {
   children: React.ReactNode;
@@ -8,6 +9,8 @@ interface Props {
 }
 
 const FadeUpText = ({ children, delay = 0 }: Props) => {
+  useEffect(() => console.log("fade up"), []);
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 40 }}

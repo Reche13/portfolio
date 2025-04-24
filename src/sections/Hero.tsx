@@ -2,16 +2,23 @@ import { bebasNeue, bricolage } from "@/assets/fonts";
 import BounceUpText from "@/components/text/BounceUpText";
 import FadeUpText from "@/components/text/FadeUpText";
 import { MotionValue, useTransform, motion } from "motion/react";
-import React from "react";
+import React, { useEffect } from "react";
 
 const Hero = ({ scrollY }: { scrollY: MotionValue<number> }) => {
   const scale = useTransform(scrollY, [0, 1], [1, 0.8]);
   const rotate = useTransform(scrollY, [0, 1], [0, -6]);
 
+  useEffect(() => console.log("Hero"), []);
+
   return (
     <motion.div
-      style={{ scale, rotate }}
-      className="sticky top-0 flex items-center justify-center h-screen bg-[#CA231D]"
+      style={{
+        scale,
+        rotate,
+        transform: "translateZ(0)",
+        backfaceVisibility: "hidden",
+      }}
+      className="sticky top-0 flex items-center will-change-transform justify-center h-screen bg-[#CA231D]"
     >
       <div
         className="absolute inset-0 pointer-events-none z-0"
@@ -49,4 +56,4 @@ const Hero = ({ scrollY }: { scrollY: MotionValue<number> }) => {
   );
 };
 
-export default Hero;
+export default React.memo(Hero);
