@@ -13,6 +13,9 @@ const About = ({ scrollY }: { scrollY: MotionValue<number> }) => {
       style={{
         scale,
         rotate,
+        transform: "translateZ(0)",
+        backfaceVisibility: "hidden",
+        boxShadow: "0px 0px 1px rgba(255, 255, 255, 0)",
       }}
       className="relative flex items-center justify-center h-screen bg-[#17140F] px-4 will-change-transform"
     >

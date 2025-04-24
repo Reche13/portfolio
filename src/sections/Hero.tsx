@@ -17,6 +17,7 @@ const Hero = ({ scrollY }: { scrollY: MotionValue<number> }) => {
         rotate,
         transform: "translateZ(0)",
         backfaceVisibility: "hidden",
+        boxShadow: "0px 0px 1px rgba(255, 255, 255, 0)",
       }}
       className="sticky top-0 flex items-center will-change-transform justify-center h-screen bg-[#CA231D]"
     >
