@@ -6,7 +6,6 @@ const Line = () => {
   const timeRef = useRef(Math.PI / 2);
   const reqIdRef = useRef<number | null>(null);
   const xRef = useRef(0);
-  const [fillColor, setFillColor] = useState("none");
 
   useEffect(() => {
     setPath(progressRef.current);
@@ -14,13 +13,12 @@ const Line = () => {
 
   const setPath = (progress: number) => {
     const { innerWidth } = window;
-    const width = innerWidth;
+    const width = innerWidth * 0.6;
     path.current?.setAttributeNS(
       "",
       "d",
       `M 0 50 Q ${width * xRef.current} ${50 + progress} ${width} 50`
     );
-    setFillColor(progress > 0 ? "black" : "white");
   };
 
   const handleMouseEnter = () => {
@@ -46,9 +44,9 @@ const Line = () => {
 
   const animateOut = () => {
     const newProgress = progressRef.current * Math.sin(timeRef.current);
-    timeRef.current += 0.2;
+    timeRef.current += 0.3;
     setPath(newProgress);
-    progressRef.current = lerp(progressRef.current, 0, 0.01);
+    progressRef.current = lerp(progressRef.current, 0, 0.025);
 
     if (Math.abs(progressRef.current) > 0.75) {
       reqIdRef.current = requestAnimationFrame(animateOut);
@@ -60,7 +58,6 @@ const Line = () => {
   const resetAnimation = () => {
     timeRef.current = Math.PI / 2;
     progressRef.current = 0;
-    setFillColor("none");
   };
 
   const lerp = (a: number, b: number, t: number) => {
@@ -68,20 +65,20 @@ const Line = () => {
   };
 
   return (
-    <div className="w-full h-px relative bg-white">
+    <div className="w-full h-px relative">
       <div
         onMouseEnter={handleMouseEnter}
         onMouseMove={handleMouseMove}
         onMouseLeave={handleMouseLeave}
-        className="w-full h-10 relative -top-5 z-10 hover:h-[200px] hover:-top-[100px]"
+        className="w-full h-10 relative -top-5 z-10 hover:h-[100px] hover:-top-[50px]"
       />
       <svg className="absolute -top-[50px] w-full h-[100px]">
         <path
-          strokeWidth={1}
+          strokeWidth={3}
           strokeLinecap="round"
-          stroke="#fff"
+          stroke="#ffffff77"
           ref={path}
-          fill={fillColor}
+          fill="none"
         ></path>
       </svg>
     </div>

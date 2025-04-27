@@ -8,6 +8,6 @@ export const bebasNeue = Bebas_Neue({
 
 export const bricolage = Bricolage_Grotesque({
   subsets: ["latin"],
-  weight: ["600", "700"],
+  weight: ["400", "500", "600", "700"],
   variable: "--font-bricolage",
 });

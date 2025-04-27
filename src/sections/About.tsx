@@ -1,12 +1,13 @@
+import Line from "@/app/line";
 import AnimatedPara from "@/components/AnimatedPara";
+import Container from "@/components/Container";
+import AboutCircle from "@/components/SvgPath/AboutCircle";
 import { useTransform, MotionValue, motion } from "motion/react";
-import React, { useEffect } from "react";
+import React from "react";
 
 const About = ({ scrollY }: { scrollY: MotionValue<number> }) => {
   const scale = useTransform(scrollY, [0, 1], [0.8, 1]);
   const rotate = useTransform(scrollY, [0, 1], [6, 0]);
-
-  useEffect(() => console.log("About"), []);
 
   return (
     <motion.div
@@ -17,7 +18,7 @@ const About = ({ scrollY }: { scrollY: MotionValue<number> }) => {
         backfaceVisibility: "hidden",
         boxShadow: "0px 0px 1px rgba(255, 255, 255, 0)",
       }}
-      className="relative flex items-center justify-center h-screen bg-[#17140F] px-4 will-change-transform"
+      className="relative h-screen bg-[#1c1d20] px-4 will-change-transform"
     >
       <div
         className="absolute inset-0 pointer-events-none z-0"
@@ -28,10 +29,18 @@ const About = ({ scrollY }: { scrollY: MotionValue<number> }) => {
           mixBlendMode: "difference",
         }}
       />
-      <AnimatedPara>
-        A Full Stack Engineer from Goa that loves building web apps that are
-        fast, scalable, and smooth.
-      </AnimatedPara>
+      <Container className="h-full">
+        <div className="w-full h-full flex flex-col justify-center">
+          <AnimatedPara>
+            A Full Stack Engineer from Goa that loves building web apps that are
+            fast, scalable, and smooth.
+          </AnimatedPara>
+          <div className="flex items-center mt-10">
+            <Line />
+            <AboutCircle />
+          </div>
+        </div>
+      </Container>
     </motion.div>
   );
 };

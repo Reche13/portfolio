@@ -4,6 +4,7 @@ import Lenis from "lenis";
 import { useEffect } from "react";
 
 import SectionOne from "@/sections/SectionOne";
+import Projects from "@/sections/Projects";
 
 export default function Home() {
   useEffect(() => {
@@ -29,6 +30,7 @@ export default function Home() {
   return (
     <div className="w-full relative bg-black">
       <SectionOne />
+      <Projects />
       <div className="bg-white h-screen w-full"></div>
     </div>
   );

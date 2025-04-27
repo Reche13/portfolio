@@ -47,7 +47,7 @@ const BounceUpText = ({ text, reverse = false, delay = 0 }: Props) => {
               },
             },
           }}
-          className="inline-block align-bottom leading-none selection:bg-black hover:opacity-50 will-change-transform"
+          className="inline-block align-bottom leading-none selection:bg-[#515BEA] hover:opacity-50 will-change-transform"
         >
           {char}
         </motion.span>
