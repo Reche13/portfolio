@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef } from "react";
 import { motion, useSpring } from "framer-motion";
 import { bebasNeue } from "@/assets/fonts";
 
