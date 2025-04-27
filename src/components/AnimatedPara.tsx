@@ -19,7 +19,7 @@ const AnimatedPara = ({ children }: { children: ReactNode }) => {
   return (
     <p
       ref={element}
-      className={`${bricolage.className} flex flex-wrap gap-4 font-bold text-[40px] md:text-[64px] leading-[1.2] text-white max-w-[20ch]`}
+      className={`${bricolage.className} flex flex-wrap gap-3 md:gap-4 font-bold text-[40px] md:text-[64px] leading-[1.2] text-white max-w-[20ch]`}
     >
       {words.map((w, index) => {
         const start = index / words.length;
