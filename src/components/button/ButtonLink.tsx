@@ -5,7 +5,7 @@ import { bricolage } from "@/assets/fonts";
 
 interface ButtonProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
   children: React.ReactNode;
-  variant?: "primary" | "secondary";
+  variant?: "primary" | "secondary" | "tertiary";
   href: string;
 }
 
@@ -50,9 +50,9 @@ export default function ButtonLink({
       <a
         {...attributes}
         href={href}
-        className={`group relative overflow-hidden flex items-center justify-center border border-[#1c1d20] rounded-full cursor-pointer py-3 px-8 ${
+        className={`w-fit group relative overflow-hidden flex items-center justify-center border rounded-full cursor-pointer py-3 px-8 ${
           variant === "primary" ? "bg-[#1c1d20]" : "bg-transparent"
-        }`}
+        } ${variant === "tertiary" ? "border-white" : "border-[#1c1d20]"}`}
         onMouseEnter={manageMouseEnter}
         onMouseLeave={manageMouseLeave}
       >
@@ -62,7 +62,9 @@ export default function ButtonLink({
           } relative z-10 transition-colors text-base font-normal duration-300 ease-linear ${
             variant === "primary"
               ? "text-white group-hover:text-white"
-              : "text-[#1c1d20] group-hover:text-white"
+              : variant === "secondary"
+              ? "text-[#1c1d20] group-hover:text-white"
+              : "text-white group-hover:text-white"
           }`}
         >
           {children}

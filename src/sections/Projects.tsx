@@ -1,16 +1,30 @@
 import { bricolage } from "@/assets/fonts";
 import Image from "next/image";
-import React from "react";
+import React, { useEffect, useRef } from "react";
 
 import poloniumImage from "@/assets/images/polonium.png";
 import kaizenImage from "@/assets/images/kaizen.png";
 
 import Container from "@/components/Container";
 import ButtonLink from "@/components/button/ButtonLink";
+import { useScroll, useTransform, motion } from "motion/react";
 
 const Projects = () => {
+  const container = useRef<null | HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: container,
+    offset: ["start end", "end start"],
+  });
+  const height = useTransform(scrollYProgress, [0, 0.9], [50, 0.5]);
+  useEffect(() => {
+    scrollYProgress.on("change", (e) => console.log(e));
+  }, []);
+
   return (
-    <div className="bg-white w-full pt-20 md:pt-40">
+    <div
+      ref={container}
+      className="bg-white w-full pt-20 md:pt-40 relative z-20"
+    >
       <h2
         className={`${bricolage.className} font-semibold text-[#1c1d20] text-[64px] text-center`}
       >
@@ -110,6 +124,10 @@ const Projects = () => {
           </div>
         </div>
       </Container>
+
+      <motion.div style={{ height }} className="relative mt-40">
+        <div className="absolute left-[-10%] bg-white h-[1550%] w-[120%] shadow-[0px_60px_50px_rgba(0,0,0,0.748)] rounded-[0_0_50%_50%]"></div>
+      </motion.div>
     </div>
   );
 };

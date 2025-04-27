@@ -5,6 +5,7 @@ import { useEffect } from "react";
 
 import SectionOne from "@/sections/SectionOne";
 import Projects from "@/sections/Projects";
+import Footer from "@/sections/Footer";
 
 export default function Home() {
   useEffect(() => {
@@ -30,8 +31,10 @@ export default function Home() {
   return (
     <div className="w-full relative bg-black">
       <SectionOne />
-      <Projects />
-      <div className="bg-white h-screen w-full"></div>
+      <div className="w-full overflow-hidden">
+        <Projects />
+        <Footer />
+      </div>
     </div>
   );
 }
