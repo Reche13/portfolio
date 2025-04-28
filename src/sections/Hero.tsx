@@ -2,13 +2,11 @@ import { bebasNeue, bricolage } from "@/assets/fonts";
 import BounceUpText from "@/components/text/BounceUpText";
 import FadeUpText from "@/components/text/FadeUpText";
 import { MotionValue, useTransform, motion } from "motion/react";
-import React, { useEffect } from "react";
+import React from "react";
 
 const Hero = ({ scrollY }: { scrollY: MotionValue<number> }) => {
   const scale = useTransform(scrollY, [0, 1], [1, 0.8]);
   const rotate = useTransform(scrollY, [0, 1], [0, -6]);
-
-  useEffect(() => console.log("Hero"), []);
 
   return (
     <motion.div

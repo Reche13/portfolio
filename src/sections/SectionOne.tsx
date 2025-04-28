@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useRef } from "react";
 import Hero from "./Hero";
 import About from "./About";
 import { useScroll } from "motion/react";
@@ -9,8 +9,6 @@ const SectionOne = () => {
     target: container,
     offset: ["start start", "end end"],
   });
-
-  useEffect(() => console.log("section one"), []);
 
   return (
     <div ref={container} className="w-full relative h-[200vh] bg-black">

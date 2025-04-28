@@ -1,6 +1,6 @@
 import { bricolage } from "@/assets/fonts";
 import Image from "next/image";
-import React, { useEffect, useRef } from "react";
+import React, { useRef } from "react";
 
 import poloniumImage from "@/assets/images/polonium.png";
 import kaizenImage from "@/assets/images/kaizen.png";
@@ -16,9 +16,6 @@ const Projects = () => {
     offset: ["start end", "end start"],
   });
   const height = useTransform(scrollYProgress, [0, 0.9], [50, 0.5]);
-  useEffect(() => {
-    scrollYProgress.on("change", (e) => console.log(e));
-  }, []);
 
   return (
     <div
