@@ -2,7 +2,7 @@
 
 import { bricolage } from "@/assets/fonts";
 import { useScroll, motion, MotionValue, useTransform } from "motion/react";
-import { ReactNode, useEffect, useRef } from "react";
+import { ReactNode, useRef } from "react";
 
 const AnimatedPara = ({ children }: { children: ReactNode }) => {
   const element = useRef<HTMLParagraphElement | null>(null);
