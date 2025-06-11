@@ -1,6 +1,6 @@
 import Line from "@/app/line";
 import AnimatedPara from "@/components/AnimatedPara";
-import Container from "@/components/Container";
+import { Container } from "@/components/Container";
 import AboutCircle from "@/components/SvgPath/AboutCircle";
 import { useTransform, MotionValue, motion } from "motion/react";
 import React from "react";

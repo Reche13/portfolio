@@ -1,6 +1,6 @@
 import { bricolage } from "@/assets/fonts";
 import ButtonLink from "@/components/button/ButtonLink";
-import Container from "@/components/Container";
+import { Container } from "@/components/Container";
 import { useScroll, useTransform, motion } from "motion/react";
 import Link from "next/link";
 import React, { useRef } from "react";

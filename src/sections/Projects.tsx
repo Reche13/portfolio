@@ -5,7 +5,7 @@ import React, { useRef } from "react";
 import poloniumImage from "@/assets/images/polonium.png";
 import kaizenImage from "@/assets/images/kaizen.png";
 
-import Container from "@/components/Container";
+import { Container } from "@/components/Container";
 import ButtonLink from "@/components/button/ButtonLink";
 import { useScroll, useTransform, motion } from "motion/react";
 
