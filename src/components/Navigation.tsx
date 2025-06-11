@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { Container } from "./Container";
 import { ThemeSwitcher } from "./ThemeSwitcher";
-import { Menu, X } from "lucide-react";
+import { House, Menu, X } from "lucide-react";
 
 export const Navigation = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -29,7 +29,11 @@ export const Navigation = () => {
           }}
           className="w-full py-3 px-4 shadow flex items-center justify-between bg-zinc-50/50 dark:bg-transparent backdrop-blur-[10px] mx-auto"
         >
-          <div className="size-10 rounded-full bg-orange-600 shrink-0" />
+          <Link href="/">
+            <div className="size-10 rounded-full bg-orange-600 shrink-0 flex items-center justify-center">
+              <House className="text-white size-4" strokeWidth={1.5} />
+            </div>
+          </Link>
           <nav className="flex items-center gap-0 md:px-4">
             {/* Desktop Links */}
             {links.map((link, index) => (
@@ -85,5 +89,5 @@ export const Navigation = () => {
 
 const links = [
   { label: "Projects", href: "/projects" },
-  { label: "Contact", href: "/contact" },
+  // { label: "Contact", href: "/contact" },
 ];

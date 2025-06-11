@@ -43,7 +43,7 @@ interface ProjectProps {
   title: string;
   desc: string;
 }
-const Project = ({ url, imageUrl, title, desc }: ProjectProps) => {
+export const Project = ({ url, imageUrl, title, desc }: ProjectProps) => {
   return (
     <Link href={url} target="_blank">
       <motion.div
