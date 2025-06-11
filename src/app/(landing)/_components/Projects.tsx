@@ -13,7 +13,7 @@ export const Projects = () => {
         </Heading>
         <Link
           href="/projects"
-          className="border-[2px] cursor-pointer border-zinc-300 dark:border-zinc-600 hover:border-orange-600 hover:bg-orange-500/5 text-zinc-500 dark:text-zinc-400 hover:text-orange-600 transition duration-300 text-xs font-medium flex items-center gap-1 py-1.5 px-2 rounded-xl"
+          className="border-[2px] cursor-pointer border-zinc-300 dark:border-zinc-600 hover:border-orange-600 active:border-orange-600 focus:border-orange-600 hover:bg-orange-500/5 active:bg-orange-500/5 focus:bg-orange-500/5 text-zinc-500 dark:text-zinc-400 hover:text-orange-600 active:text-orange-600 focus:text-orange-600 transition duration-300 text-xs font-medium flex items-center gap-1 py-1.5 px-2 rounded-xl"
         >
           See More
           <ArrowRight strokeWidth={1.5} className="size-4" />
