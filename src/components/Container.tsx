@@ -1,19 +1,11 @@
 import { ReactNode } from "react";
 
-export default function Container({
-  className,
+export const Container = ({
   children,
+  className,
 }: {
-  className?: string;
   children: ReactNode;
-}) {
-  return (
-    <div className={`${className} max-w-[1280px] mx-auto px-5 md:px-8`}>
-      {children}
-    </div>
-  );
-}
-
-Container.displayName = "Container";
-
-export { Container };
+  className?: string;
+}) => {
+  return <div className={`max-w-4xl mx-auto ${className}`}>{children}</div>;
+};
