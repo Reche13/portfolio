@@ -8,7 +8,7 @@ import { Container } from "@/components/Container";
 import { Header } from "./_components/Header";
 import { Showcase } from "./_components/Showcase";
 
-export default function Home() {
+export default function Projects() {
   useEffect(() => {
     const lenis = new Lenis({
       lerp: 0.1,

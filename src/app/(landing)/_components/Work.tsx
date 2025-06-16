@@ -19,7 +19,7 @@ export const Work = () => {
           name="Intellicure Healthcare"
           position="Fullstack Engineer"
           duration="2022 - 2023"
-          imageUrl="/vericy.svg"
+          imageUrl="/intellicure.svg"
           desc="Built booking systems, migrated legacy apps, and launched a custom course platform at Intellicure."
         />
       </div>
