@@ -10,9 +10,15 @@ export const Header = () => {
       </div>
 
       <p className="text-neutral-600 dark:text-zinc-300 font-medium max-w-[60ch] mt-4">
-        I&apos;m a Frontend Engineer who loves clean UIs and polished
-        animations. When I&apos;m not coding, you&apos;ll find me at the piano
-        or guitar, playing classical or jazz.
+        I&apos;m a Frontend Engineer with <strong>3+ </strong>
+        years of experience, mostly at early-stage startups where I&apos;ve had
+        the chance to build things from the ground up. From designing frontend
+        architecture and scaling multi-app monorepos to creating full design
+        systems.
+        <br />
+        <br />I recently launched Berlix UI, an animated UI library that crossed
+        500 users in its first week. I care about design, flow, and the little
+        details most people overlook.
       </p>
     </Container>
   );
