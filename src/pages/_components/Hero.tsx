@@ -5,16 +5,20 @@ import Link from "next/link";
 
 export const Hero = () => {
   return (
-    <Container className="w-full px-4 md:px-10 pb-8 pt-24 bg-zinc-50 dark:bg-zinc-900 shadow-reche">
+    <Container className="w-full px-4 md:px-10 pb-8 pt-24 bg-zinc-50 dark:bg-zinc-900">
       <div className="w-full flex items-center justify-between">
         <Heading>Reché Soares</Heading>
       </div>
 
-      <p className="text-neutral-600 dark:text-zinc-300 font-medium max-w-[60ch] mt-4">
+      <p className="text-neutral-600 dark:text-zinc-300 font-medium max-w-[65ch] mt-4">
         I&apos;m a{" "}
-        <span className="font-semibold text-orange-600">Frontend Engineer</span>{" "}
-        who loves clean UIs and polished animations. When I&apos;m not coding,
-        you&apos;ll find me at the piano or guitar, playing classical or jazz.
+        <span className="font-semibold text-orange-600">
+          Fullstack Engineer
+        </span>{" "}
+        blending clean frontend design with robust backend systems. I build apps
+        that look great, run smoothly, and scale effortlessly. When I&apos;m not
+        coding, you&apos;ll find me at the piano or guitar, playing classical or
+        jazz.
       </p>
       <Link
         href="/resume.pdf"

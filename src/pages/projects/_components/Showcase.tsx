@@ -1,4 +1,4 @@
-import { Project } from "@/app/(landing)/_components/Projects";
+import { Project } from "@/pages/_components/Projects";
 import { Container } from "@/components/Container";
 
 export const Showcase = () => {
