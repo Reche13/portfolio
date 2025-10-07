@@ -19,7 +19,7 @@ export const Navigation = () => {
 
   return (
     <div className="relative w-full">
-      <Container className="fixed w-full z-50 top-0 left-1/2 transform -translate-x-1/2">
+      <Container className="fixed w-full z-10 top-0 left-1/2 transform -translate-x-1/2">
         <motion.header
           animate={{
             boxShadow: scrolled ? "0 2px 5px 0 rgba(0, 0, 0, 0.2)" : "none",

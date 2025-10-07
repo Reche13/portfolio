@@ -1,11 +1,12 @@
 import { inter } from "@/assets/fonts";
 import "@/styles/globals.css";
 import { Analytics } from "@vercel/analytics/react";
+import { AnimatePresence } from "motion/react";
 import { ThemeProvider } from "next-themes";
 import type { AppProps } from "next/app";
 import Head from "next/head";
 
-export default function App({ Component, pageProps }: AppProps) {
+export default function App({ Component, pageProps, router }: AppProps) {
   return (
     <ThemeProvider attribute="class" defaultTheme="light">
       <Head>
@@ -18,7 +19,9 @@ export default function App({ Component, pageProps }: AppProps) {
       </Head>
       <div className={`${inter.className} antialiased`}>
         <Analytics />
-        <Component {...pageProps} />
+        <AnimatePresence mode="wait">
+          <Component key={router.route} {...pageProps} />
+        </AnimatePresence>
       </div>
     </ThemeProvider>
   );
