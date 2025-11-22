@@ -13,9 +13,9 @@ export const PostgreSQLIcon = (props: React.SVGProps<SVGSVGElement>) => {
       />
       <path
         stroke="#fff"
-        stroke-width="3"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="3"
+        strokeLinecap="round"
+        strokeLinejoin="round"
         d="M4.335 19.029"
         fill="none"
       />

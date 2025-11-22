@@ -16,7 +16,8 @@ export const ThemeSwitcher = () => {
       onClick={toggleTheme}
       className="flex items-center rounded-xl p-1 border-[2px] border-transparent hover:bg-orange-500/5 hover:border-orange-600 transition-colors text-zinc-600 dark:text-zinc-300 hover:text-orange-600 cursor-pointer"
     >
-      {isDark ? <Sun size={16} /> : <Moon size={16} />}
+      <Sun size={16} className="hidden dark:block" />
+      <Moon size={16} className="block dark:hidden" />
     </button>
   );
 };
