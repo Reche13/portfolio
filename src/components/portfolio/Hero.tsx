@@ -13,10 +13,10 @@ export const Hero = () => {
   return (
     <Container>
       <div className="w-full pt-20">
-        <h1 className="text-3xl font-bold text-zinc-900 dark:text-zinc-50">
+        <h1 className="text-4xl font-bold text-zinc-900 dark:text-zinc-50 selection:text-zinc-50 selection:bg-orange-600">
           Reché Soares
         </h1>
-        <div className="mt-4 font-medium text-lg leading-loose text-zinc-700 dark:text-zinc-300">
+        <div className="mt-4 font-medium text-lg leading-relaxed text-zinc-600 dark:text-zinc-400 selection:bg-orange-600 selection:text-zinc-50">
           <span>I'm a </span>
           <span className="font-semibold text-orange-600">
             Full Stack Developer
@@ -33,7 +33,7 @@ export const Hero = () => {
         </div>
 
         <div className="mt-8 flex items-center gap-4">
-          <button className="h-9 cursor-pointer border border-zinc-400 dark:border-zinc-600 bg-zinc-200 dark:bg-zinc-900 px-3 py-1.5 rounded-lg flex items-center gap-2 text-zinc-600 dark:text-zinc-400">
+          <button className="h-9 cursor-pointer border border-zinc-700 dark:border-zinc-300 bg-zinc-200 dark:bg-zinc-900 px-3 py-1.5 rounded-lg flex items-center gap-2 text-zinc-700 dark:text-zinc-300">
             <FileText className="size-4" />
             <span className="text-sm">View Resume</span>
           </button>
