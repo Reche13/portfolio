@@ -88,4 +88,37 @@ export const PROJECTS: Project[] = [
       },
     ],
   },
+
+  {
+    id: "microservice",
+    title: "Microservice Application",
+    description:
+      "A UI library of clean, animated components you can drop into any project.",
+    imageUrl: "/images/projects/berlix.png",
+    videoUrl: "io",
+    githubUrl: "github.com/reche13/berlix",
+    websiteUrl: "ui.rechesoares.com",
+    stack: [
+      {
+        label: "TypeScript",
+        icon: TypeScriptIcon,
+      },
+      {
+        label: "React",
+        icon: ReactIcon,
+      },
+      {
+        label: "Next.js",
+        icon: NextIcon,
+      },
+      {
+        label: "Tailwind CSS",
+        icon: PostgreSQLIcon,
+      },
+      {
+        label: "Motion",
+        icon: NextIcon,
+      },
+    ],
+  },
 ];

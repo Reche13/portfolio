@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { inter } from "@/assets/fonts";
+import { jetBrainsMono } from "@/assets/fonts";
 import { ThemeProvider } from "next-themes";
 
 export const metadata: Metadata = {
@@ -15,7 +15,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${inter.className} antialiased`}>
+      <body className={`${jetBrainsMono.className} antialiased`}>
         <ThemeProvider attribute="class" defaultTheme="light">
           {children}
         </ThemeProvider>
