@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { jetBrainsMono } from "@/assets/fonts";
 import { ThemeProvider } from "next-themes";
+import ReactLenis from "lenis/react";
 
 export const metadata: Metadata = {
   title: "Reche Soares | Fullstack Developer",
@@ -17,6 +18,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={`${jetBrainsMono.className} antialiased`}>
         <ThemeProvider attribute="class" defaultTheme="light">
+          <ReactLenis root />
           {children}
         </ThemeProvider>
       </body>

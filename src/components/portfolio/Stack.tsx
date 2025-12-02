@@ -1,11 +1,11 @@
 import { Container } from "@/components/common/Container";
 import { SectionHeading } from "@/components/common/SectionHeading";
 
-export const Contact = () => {
+export const Stack = () => {
   return (
     <Container className="mt-28">
-      <SectionHeading heading="Message" subHeading="Send A" />
-      <div className="mt-8 flex flex-col gap-8">Contact Form</div>
+      <SectionHeading heading="Stack" subHeading="Tech" />
+      <div className="mt-8 flex flex-col gap-8">Tech Stack</div>
     </Container>
   );
 };

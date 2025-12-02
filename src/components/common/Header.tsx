@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export const Header = () => {
   return (
-    <div className="sticky top-0 z-30 w-full border-b border-zinc-300 dark:border-zinc-800 backdrop-blur-sm">
+    <div className="sticky top-0 z-30 w-full border-b border-zinc-100 dark:border-zinc-800 bg-zinc-50/50 dark:bg-zinc-950/50 backdrop-blur-md">
       <Container>
         <header className="w-full flex items-center justify-between py-4">
           <div className="text-zinc-900 dark:text-zinc-50 font-semibold h-8 w-8 bg-orange-600 rounded-full items-center justify-center flex">
