@@ -2,18 +2,26 @@
 
 import { SVGProps, JSX } from "react";
 import { Tooltip, TooltipContent, TooltipTrigger } from "../ui/tooltip";
+import { cn } from "@/lib/utils";
 
 interface Props {
   label: string;
   icon: (props: SVGProps<SVGSVGElement>) => JSX.Element;
+  size?: "sm" | "md" | "lg";
 }
 
-export const TechCapsuleMini = ({ icon: Icon, label }: Props) => {
+export const TechCapsuleMini = ({ icon: Icon, label, size = "sm" }: Props) => {
   return (
     <Tooltip>
       <TooltipTrigger>
-        <div className="size-6 hover:scale-120 transition-all duration-300 hover:cursor-pointer">
-          <Icon className="size-6" />
+        <div className="hover:scale-120 transition-all duration-300 hover:cursor-pointer">
+          <Icon
+            className={cn(
+              size === "sm" && "size-6",
+              size === "md" && "size-8",
+              size === "lg" && "size-10"
+            )}
+          />
         </div>
       </TooltipTrigger>
       <TooltipContent className="">

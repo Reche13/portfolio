@@ -3,6 +3,7 @@ import "./globals.css";
 import { jetBrainsMono } from "@/assets/fonts";
 import { ThemeProvider } from "next-themes";
 import ReactLenis from "lenis/react";
+import { Toaster } from "sonner";
 
 export const metadata: Metadata = {
   title: "Reche Soares | Fullstack Developer",
@@ -19,6 +20,7 @@ export default function RootLayout({
       <body className={`${jetBrainsMono.className} antialiased`}>
         <ThemeProvider attribute="class" defaultTheme="light">
           <ReactLenis root />
+          <Toaster position="top-center" />
           {children}
         </ThemeProvider>
       </body>
