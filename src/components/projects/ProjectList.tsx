@@ -1,3 +1,4 @@
+"use client";
 import { PROJECTS } from "@/configs/projects";
 import { ProjectCard } from "./ProjectCard";
 
