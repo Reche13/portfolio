@@ -1,7 +1,7 @@
 "use client";
 import { Container } from "@/components/common/Container";
 import { SectionHeading } from "@/components/common/SectionHeading";
-import { ExperienceCard } from "../common/experience/ExperienceCard";
+import { ExperienceCard } from "../experience/ExperienceCard";
 
 import { EXPERIENCE } from "@/configs/experience";
 

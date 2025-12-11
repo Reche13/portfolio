@@ -8,12 +8,18 @@ import {
 } from "@/components/ui/collapsible";
 import { motion, AnimatePresence } from "motion/react";
 import { useState } from "react";
-import { TechCapsule } from "../TechCapsule";
+import { TechCapsule } from "../common/TechCapsule";
 import Image from "next/image";
 import { Experience } from "@/types";
 
-export const ExperienceCard = ({ exp }: { exp: Experience }) => {
-  const [open, setOpen] = useState(false);
+export const ExperienceCard = ({
+  exp,
+  isOpen = false,
+}: {
+  exp: Experience;
+  isOpen?: boolean;
+}) => {
+  const [open, setOpen] = useState(isOpen);
 
   return (
     <Collapsible

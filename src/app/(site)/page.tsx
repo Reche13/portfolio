@@ -6,7 +6,7 @@ import { Stack } from "@/components/portfolio/Stack";
 
 export default function Home() {
   return (
-    <div className="relative w-full bg-zinc-50 dark:bg-zinc-950 text-zinc-900 dark:text-zinc-50 flex-1 min-h-[200vh]">
+    <div className="relative w-full bg-zinc-50 dark:bg-zinc-950 text-zinc-900 dark:text-zinc-50 flex-1 min-h-screen">
       <div
         className="absolute inset-0 h-full w-full 
       bg-white dark:bg-zinc-950 
