@@ -15,3 +15,15 @@ export type Tech = {
   label: string;
   icon: (props: SVGProps<SVGSVGElement>) => JSX.Element;
 };
+
+export type Experience = {
+  id: string;
+  name: string;
+  position: string;
+  logo: string;
+  location: string;
+  from: string;
+  till: string;
+  stack: Tech[];
+  achievements: string[];
+};

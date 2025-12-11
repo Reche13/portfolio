@@ -1,7 +1,7 @@
 export const FOOTER_LINKS = [
   {
-    label: "about me",
-    href: "/about",
+    label: "home",
+    href: "/",
   },
   {
     label: "projects",
