@@ -95,7 +95,7 @@ export const ExperienceCard = ({
                 </div>
 
                 <div className="mt-6">
-                  <ul className="pl-5 list-disc flex flex-col gap-2 text-sm font-normal text-zinc-600 dark:text-zinc-400">
+                  <ul className="pl-5 list-disc flex flex-col gap-3 text-sm font-normal text-zinc-600 dark:text-zinc-400">
                     {exp.achievements.map((ach, idx) => (
                       <li key={`${exp.id}-achievement-${idx}`}>{ach}</li>
                     ))}
