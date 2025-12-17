@@ -14,6 +14,7 @@ import { TechCapsuleMini } from "../common/TechCapsuleMini";
 import { GithubIcon } from "@/assets/animated-icons/github";
 import { RadioIcon } from "@/assets/animated-icons/radio";
 import { Project } from "@/types";
+import { TECH_REGISTRY } from "@/configs/tech-regsitry";
 
 interface Props {
   project: Project;
@@ -100,13 +101,17 @@ export function ProjectCard({ project }: Props) {
           <div className="">
             <h4 className="text-sm font-medium text-zinc-500">Technologies</h4>
             <div className="flex flex-wrap gap-2 mt-3">
-              {project.stack.map((tech, idx) => (
-                <TechCapsuleMini
-                  key={`${tech.label}-${idx}`}
-                  icon={tech.icon}
-                  label={tech.label}
-                />
-              ))}
+              {project.stack.map((key, idx) => {
+                const tech = TECH_REGISTRY[key];
+                if (!tech) return null;
+                return (
+                  <TechCapsuleMini
+                    key={`${tech.title}-${idx}-${project.id}`}
+                    icon={tech.icon}
+                    label={tech.title}
+                  />
+                );
+              })}
             </div>
           </div>
           <div className="mt-5 flex justify-between">
