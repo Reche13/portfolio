@@ -1,3 +1,4 @@
+import { TechKey } from "@/configs/tech-regsitry";
 import { SVGProps, JSX } from "react";
 
 export type Project = {
@@ -8,7 +9,7 @@ export type Project = {
   videoUrl: string;
   websiteUrl: string;
   githubUrl: string;
-  stack: Tech[];
+  stack: TechKey[];
 };
 
 export type Tech = {
@@ -26,4 +27,12 @@ export type Experience = {
   till: string;
   stack: Tech[];
   achievements: string[];
+};
+
+// export type ProjectFrontmatter = Omit<Project>;
+
+export type ProjectCaseStudy = {
+  slug: string;
+  frontmatter: Project;
+  content: string;
 };

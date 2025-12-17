@@ -13,7 +13,6 @@ import Link from "next/link";
 import { TechCapsuleMini } from "../common/TechCapsuleMini";
 import { GithubIcon } from "@/assets/animated-icons/github";
 import { RadioIcon } from "@/assets/animated-icons/radio";
-import { Tooltip, TooltipContent, TooltipTrigger } from "../ui/tooltip";
 import { Project } from "@/types";
 
 interface Props {
