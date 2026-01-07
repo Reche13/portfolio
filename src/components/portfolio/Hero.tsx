@@ -12,7 +12,7 @@ export const Hero = () => {
   return (
     <Container>
       <div className="w-full pt-20">
-        <h1 className="text-3xl font-bold text-zinc-900 dark:text-zinc-50 selection:text-zinc-50 selection:bg-orange-600">
+        <h1 className="text-shadow-xs text-3xl font-bold text-zinc-900 dark:text-zinc-50 selection:text-zinc-50 selection:bg-orange-600">
           Reché Soares
         </h1>
         <div className="mt-6 font-medium text-base leading-loose tracking-tight text-zinc-600 dark:text-zinc-400 selection:bg-orange-600 selection:text-zinc-50">

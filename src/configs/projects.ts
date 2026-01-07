@@ -1,8 +1,3 @@
-import { GolangIcon } from "@/assets/tech-icons/golang";
-import { NextIcon } from "@/assets/tech-icons/next";
-import { PostgreSQLIcon } from "@/assets/tech-icons/postgresql";
-import { ReactIcon } from "@/assets/tech-icons/react";
-import { TypeScriptIcon } from "@/assets/tech-icons/typescript";
 import { Project } from "@/types";
 
 export const PROJECTS: Project[] = [
@@ -10,24 +5,12 @@ export const PROJECTS: Project[] = [
     id: "echodb",
     title: "Echo DB",
     description:
-      "A lightweight in-memory database built on top of RESP protocol. Supports KV store, Lists, Sets, pub-sub, and much more.",
+      "A lightweight in-memory database based on RESP protocol. Supports KV store, Lists, Persitence using AOF, configurations using YAML and much more.",
     imageUrl: "/images/projects/berlix.png",
-    videoUrl: "io",
-    githubUrl: "github.com/reche13/berlix",
-    websiteUrl: "ui.rechesoares.com",
-    stack: ["golang", "next", "postgresql", "typescript"],
-  },
-
-  {
-    id: "echodb",
-    title: "HTTP Server from Scratch",
-    description:
-      "a HTTP server written entirely from scartch in go, with a custom requst parser, supporting concurent requests, handling upto 300K r/s.",
-    imageUrl: "/images/projects/proj.jpg",
-    videoUrl: "io",
-    githubUrl: "github.com/reche13/berlix",
-    websiteUrl: "ui.rechesoares.com",
-    stack: ["golang", "react"],
+    videoUrl: "",
+    githubUrl: "https://github.com/reche13/echodb",
+    websiteUrl: "https://echo.rechesoares.com",
+    stack: ["golang", "docker"],
   },
 
   {
@@ -36,21 +19,33 @@ export const PROJECTS: Project[] = [
     description:
       "A UI library of clean, animated components you can drop into any project.",
     imageUrl: "/images/projects/berlix.png",
-    videoUrl: "io",
-    githubUrl: "github.com/reche13/berlix",
-    websiteUrl: "ui.rechesoares.com",
-    stack: ["typescript", "react", "next"],
+    videoUrl: "",
+    githubUrl: "https://github.com/reche13/berlix",
+    websiteUrl: "https://ui.rechesoares.com",
+    stack: ["typescript", "react", "next", "tailwindcss", "motion"],
   },
 
   {
-    id: "microservice",
-    title: "Microservice Application",
+    id: "http",
+    title: "HTTP Server from Scratch",
     description:
-      "A UI library of clean, animated components you can drop into any project.",
+      "A HTTP/1.1 server written entirely from scartch in go, with a custom requst parser, supporting concurent requests, chunked request and respones, handling upto 300K r/s.",
+    imageUrl: "/images/projects/proj.jpg",
+    videoUrl: "",
+    githubUrl: "https://github.com/reche13/http-from-scratch",
+    websiteUrl: "",
+    stack: ["golang"],
+  },
+
+  {
+    id: "polonium",
+    title: "Polonium",
+    description:
+      "A Postman-like tool for testing REST and WebSocket endpoints with support for custom headers, cookies, payloads, and organized collections using nested folders",
     imageUrl: "/images/projects/berlix.png",
-    videoUrl: "io",
-    githubUrl: "github.com/reche13/berlix",
-    websiteUrl: "ui.rechesoares.com",
-    stack: ["react", "golang", "postgresql"],
+    videoUrl: "",
+    githubUrl: "https://github.com/reche13/polonium",
+    websiteUrl: "https://polonium.rechesoares.com",
+    stack: ["typescript", "react", "next", "tailwindcss", "shadcn"],
   },
 ];

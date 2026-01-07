@@ -72,15 +72,17 @@ export function ProjectCard({ project }: Props) {
             {project.title}
           </h3>
           <div className="flex items-center gap-8 mt-5">
-            <Link
-              href={project.websiteUrl}
-              className="cursor-pointer group/l flex items-center gap-1.5 pb-0.5 text-sm text-zinc-600 dark:text-zinc-300 hover:text-orange-600"
-            >
-              <RadioIcon size={22} />
-              <span className="border-b-2 border-transparent group-hover/l:border-orange-600 border-dashed transition-colors duration-100">
-                View Live
-              </span>
-            </Link>
+            {project.websiteUrl && (
+              <Link
+                href={project.websiteUrl}
+                className="cursor-pointer group/l flex items-center gap-1.5 pb-0.5 text-sm text-zinc-600 dark:text-zinc-300 hover:text-orange-600"
+              >
+                <RadioIcon size={22} />
+                <span className="border-b-2 border-transparent group-hover/l:border-orange-600 border-dashed transition-colors duration-100">
+                  View Live
+                </span>
+              </Link>
+            )}
 
             <Link
               href={project.githubUrl}
@@ -114,7 +116,7 @@ export function ProjectCard({ project }: Props) {
               })}
             </div>
           </div>
-          <div className="mt-5 flex justify-between">
+          {/* <div className="mt-5 flex justify-between">
             <span />
             <Link
               href={`/projects/${project.id}`}
@@ -125,7 +127,7 @@ export function ProjectCard({ project }: Props) {
               </span>
               <ArrowRight className="size-4 -translate-x-1 group-hover/a:translate-x-0 transition-transform duration-300 ease-[0.25,1,0.5,1]" />
             </Link>
-          </div>
+          </div> */}
         </div>
       </div>
     </motion.div>

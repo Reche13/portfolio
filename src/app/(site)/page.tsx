@@ -17,7 +17,7 @@ export default function Home() {
         <Hero />
         <Projects />
         <Experience />
-        <Stack />
+        {/* <Stack /> */}
         <Contact />
       </div>
     </div>

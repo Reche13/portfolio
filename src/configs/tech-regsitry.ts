@@ -27,6 +27,7 @@ import { SocketIOIcon } from "@/assets/tech-icons/socketio";
 import { TailwindCSSIcon } from "@/assets/tech-icons/tailwindcss";
 import { ThreeJSIcon } from "@/assets/tech-icons/threejs";
 import { VercelIcon } from "@/assets/tech-icons/vercel";
+import { DockerIcon } from "@/assets/tech-icons/docker";
 
 export const TECH_REGISTRY = {
   react: {
@@ -48,6 +49,10 @@ export const TECH_REGISTRY = {
   postgresql: {
     title: "PostgreSQL",
     icon: PostgreSQLIcon,
+  },
+  docker: {
+    title: "Docker",
+    icon: DockerIcon,
   },
   aws: {
     title: "AWS",
