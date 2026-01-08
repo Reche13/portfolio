@@ -12,6 +12,7 @@ import { ProjectTechStack } from "@/components/projects/ProjectTechStack";
 import Link from "next/link";
 import { RadioIcon } from "@/assets/animated-icons/radio";
 import { GithubIcon } from "@/assets/animated-icons/github";
+import { BackgroundGrid } from "@/components/common/BackgroundGrid";
 
 interface ProjectPageParams {
   params: Promise<{
@@ -29,12 +30,7 @@ export default async function ProjectPage({ params }: ProjectPageParams) {
 
   return (
     <div className="relative w-full bg-zinc-50 dark:bg-zinc-950 text-zinc-900 dark:text-zinc-50 flex-1 min-h-screen">
-      <div
-        className="absolute inset-0 h-full w-full 
-        bg-white dark:bg-zinc-950 
-        bg-[linear-gradient(to_right,#80808015_1px,transparent_1px),linear-gradient(to_bottom,#80808015_1px,transparent_1px)] 
-        bg-size-[40px_40px]"
-      />
+      <BackgroundGrid />
       <div className="relative px-8 mx-auto pt-20">
         <Container>
           <div className="flex flex-col gap-8 w-full">
